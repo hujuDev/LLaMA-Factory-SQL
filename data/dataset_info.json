@@ -392,5 +392,13 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "spider_sql": {
+    "hf_hub_url": "b-mc2/sql-create-context",
+    "columns": {
+      "prompt": "question",
+      "query": "context",
+      "response": "answer"
+    }
   }
 }

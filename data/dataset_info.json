@@ -400,5 +400,13 @@
       "query": "context",
       "response": "answer"
     }
+  },
+  "spider_sql_custom": {
+    "hf_hub_url": "hujudev/spider-text-2-sql-train",
+    "columns": {
+      "prompt": "Question",
+      "query": "Schema",
+      "response": "query"
+    }
   }
 }

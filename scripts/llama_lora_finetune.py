@@ -32,7 +32,7 @@ if len(wandb_project) > 0:
     os.environ["WANDB_PROJECT"] = wandb_project
 
 # Prepend the path to the output_folder
-output_dir = f"saves/Custom/lora/{args.output_folder}"
+output_dir = f"../saves/Custom/lora/{args.output_folder}"
 
 # Run experiment with specified arguments
 run_exp(dict(

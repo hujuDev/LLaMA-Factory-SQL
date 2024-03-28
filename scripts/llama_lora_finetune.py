@@ -25,14 +25,6 @@ except AssertionError:
     print("Please set up a GPU before using LLaMA Factory")
     exit()
 
-# Log in to Weights & Biases
-wandb.login()
-
-# Configure Weights & Biases project
-wandb_project = "codellama-7b-sql-finetune"
-if len(wandb_project) > 0:
-    os.environ["WANDB_PROJECT"] = wandb_project
-
 # Generate a unique output directory based on model, dataset, and current time
 current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 model_name_short = args.model_name_or_path.split("/")[-1]  # Extract the last part of the model path
@@ -41,6 +33,15 @@ output_dir = f"../saves/Custom/lora/{run_name}"
 
 # Ensure the output directory exists
 os.makedirs(output_dir, exist_ok=True)
+
+# Log in to Weights & Biases
+wandb.login()
+
+# Configure Weights & Biases project
+wandb_project = "codellama-7b-sql-finetune"
+if len(wandb_project) > 0:
+    os.environ["WANDB_PROJECT"] = wandb_project
+wandb.init(project=wandb_project, name=run_name)
 
 # Run experiment with specified arguments and the generated output directory
 run_exp(dict(
@@ -62,9 +63,5 @@ run_exp(dict(
   max_samples=args.max_samples,
   max_grad_norm=1.0,
   fp16=True,
-  report_to="wandb",
-  wandb={
-    'project': wandb_project,
-    'name': run_name  # Specify your custom run name here
-  }
+  report_to="wandb"
 ))

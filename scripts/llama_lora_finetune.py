@@ -38,7 +38,7 @@ os.makedirs(output_dir, exist_ok=True)
 wandb.login()
 
 # Configure Weights & Biases project
-wandb_project = "codellama-7b-sql-finetune"
+wandb_project = "BA_Text-To-SQL"
 if len(wandb_project) > 0:
     os.environ["WANDB_PROJECT"] = wandb_project
 wandb.init(project=wandb_project, name=run_name)

@@ -1,5 +1,5 @@
 {
-  "default_config": {
+  "default-config": {
     "stage": "sft",
     "do_train": true,
     "template": "default",
@@ -17,7 +17,7 @@
     "fp16": true,
     "report_to": "wandb"
   },
-  "longer_input_config": {
+  "longer-input-config": {
     "stage": "sft",
     "do_train": true,
     "template": "default",

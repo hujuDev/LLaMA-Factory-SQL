@@ -16,7 +16,7 @@ default_output_folder = os.path.join(script_dir, "../../../checkpoints")
 parser = argparse.ArgumentParser(description="Fine-tune a model with specified parameters")
 parser.add_argument("--model_name_or_path", type=str, required=True, help="Path or name of the model")
 parser.add_argument("--dataset", type=str, required=True, help="Dataset name or path")
-parser.add_argument("--config_name", type=str, default="default_config", help="Name of the configuration to use")
+parser.add_argument("--config_name", type=str, default="default-config", help="Name of the configuration to use")
 parser.add_argument("--output_folder", type=str, default=default_output_folder, help="The output directory for the trained checkpoint")
 
 args = parser.parse_args()

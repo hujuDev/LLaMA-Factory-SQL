@@ -393,7 +393,7 @@
     },
     "folder": "python"
   },
-  "spider_sql": {
+  "spider-sql": {
     "hf_hub_url": "b-mc2/sql-create-context",
     "columns": {
       "prompt": "question",
@@ -401,7 +401,7 @@
       "response": "answer"
     }
   },
-  "spider_sql_custom": {
+  "spider-sql-custom": {
     "hf_hub_url": "hujudev/spider-text-2-sql-train",
     "columns": {
       "prompt": "Question",

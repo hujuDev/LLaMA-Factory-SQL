@@ -10,7 +10,7 @@ import wandb
 script_dir = os.path.dirname(os.path.realpath(__file__))
 config_file_name = "finetuning_configs.json"
 config_path = os.path.join(script_dir, config_file_name)
-default_output_folder = os.path.join(script_dir, "../../checkpoints")
+default_output_folder = os.path.join(script_dir, "../../../checkpoints")
 
 # Setup argument parser
 parser = argparse.ArgumentParser(description="Fine-tune a model with specified parameters")
